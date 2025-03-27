@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tba-types": "github:bryab/tba-types",
+    "typescript": "^5.8.2"
+  }
+}
