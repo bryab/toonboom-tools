@@ -1,5 +1,4 @@
 name: Build Harmony Scripts
-run-name: ${{ gitea.actor }} is building! 🚀
 on: [push]
 
 jobs:
