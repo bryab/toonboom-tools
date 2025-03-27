@@ -14,4 +14,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: toonboom-tools
-          path: ${{ gitea.workspace }}/dist
+          path: ${{ github.workspace }}/dist
