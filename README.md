@@ -11,5 +11,6 @@ I will start compiling a zip of the scripts for end-users, but for now this is h
 Just build directly into the folder ToonBoom loads scripts from:
 
 ```powershell
+npm install
 npx tsc --outDir "$env:APPDATA\Toon Boom Animation\Toon Boom Harmony Premium\2400-scripts"
 ```
