@@ -8,6 +8,31 @@ function StackNodes() {
   scene.endUndoRedoAccum();
 }
 
+function AlignHorizontal() {
+  scene.beginUndoRedoAccum("Align selected nodes horizontally");
+  var modules = selection.selectedNodes();
+  if (modules.length < 2) {
+    return;
+  }
+  var all_y: number[] = [];
+  modules.forEach(function (nodePath) {
+    all_y.push(node.coordY(nodePath) + node.height(nodePath) / 2);
+  });
+  const sum = all_y.reduce(function (a, b) {
+    return a + b;
+  });
+  const avg = sum / all_y.length;
+
+  modules.forEach(function (nodePath) {
+    Utils.move(
+      nodePath,
+      node.coordX(nodePath),
+      avg - node.height(nodePath) / 2
+    );
+  });
+  scene.endUndoRedoAccum();
+}
+
 namespace Utils {
   export function sortNodesByY(nodes: string[]) {
     return nodes.sort(function (a, b) {
@@ -69,7 +94,7 @@ namespace Utils {
         else offset_y += transform.height;
       }
 
-      _move(
+      move(
         nodePath,
         start.x + col * opt.spacing_x + offset_x,
         start.y + row * opt.spacing_y + offset_y
@@ -124,12 +149,12 @@ namespace Utils {
     };
   }
 
-  function _move(nodePath: string, x: number, y: number) {
-    if (Array.isArray(nodePath)) _moveAll(nodePath, x, y);
+  export function move(nodePath: string, x: number, y: number) {
+    if (Array.isArray(nodePath)) moveAll(nodePath, x, y);
     else node.setCoord(nodePath, x, y);
   }
 
-  function _moveAll(modules: string[], x: number, y: number) {
+  export function moveAll(modules: string[], x: number, y: number) {
     const transform = _getTransform(modules);
 
     modules.forEach(function (nodePath) {
