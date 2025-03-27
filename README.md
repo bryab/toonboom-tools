@@ -8,13 +8,7 @@ I will start compiling a zip of the scripts for end-users, but for now this is h
 
 ## Windows Powershell
 
-```powershell
-$SCRIPTS_DIR="$env:APPDATA\Toon Boom Animation\Toon Boom Harmony Premium\2400-scripts"
-New-Item -ItemType Directory -Force -Path $SCRIPTS_DIR
-New-Item -Path "$SCRIPTS_DIR\toonboom-tools" -ItemType SymbolicLink -Value "$(Get-Location)\dist"
-```
-
-Actually that doesn't work. Just build directly into the folder
+Just build directly into the folder ToonBoom loads scripts from:
 
 ```powershell
 npx tsc --outDir "$env:APPDATA\Toon Boom Animation\Toon Boom Harmony Premium\2400-scripts"
