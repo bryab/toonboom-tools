@@ -2,13 +2,14 @@
 
 A collection of scripts for Toon Boom Harmony, mostly for compositing needs.
 
-# Installation (for development purposes)
+# Gimme the tools
 
-I will start compiling a zip of the scripts for end-users, but for now this is how I do it. Create the scripts directory if it does not exist, and then symlink the `./dist` folder into it:
+You can download a zip here: https://github.com/bryab/toonboom-tools/releases
+Or if you want a nightly build, go to the 'Actions' section in here and download the latest build artifact.
+
+# Dev Build
 
 ## Windows Powershell
-
-Just build directly into the folder ToonBoom loads scripts from:
 
 ```powershell
 npm install
