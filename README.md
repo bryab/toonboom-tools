@@ -2,12 +2,23 @@
 
 A collection of scripts for Toon Boom Harmony, mostly for compositing needs.
 
-# Gimme the tools
-
 You can download a zip here: https://github.com/bryab/toonboom-tools/releases
-Or if you want a nightly build, go to the 'Actions' section in here and download the latest build artifact.
 
-# Dev Build
+_If you want a more recent build, go to the 'Actions' section up above and download the latest build artifact._
+
+## Connect to Multi-Layer-Write
+
+Connects the selected nodes in the node graph to a root-level MLW node. If no MLW node exists, it will be created. Nodes within groups can be selected, and their output will be wired all the way down to the root level automatically. MLW layers will be named according to the name of the node.
+
+## Stack Nodes
+
+Just clean up the selected nodes by putting them in a vertical stack.
+
+## Align Horizontal
+
+Aligns the selected nodes on the X-axis in the node graph.
+
+# Development
 
 ## Windows Powershell
 
