@@ -8,21 +8,15 @@ All scripts are prefixed with `BF_` so they're easier to find in Harmony.
 
 _If you want a more recent build, go to the 'Actions' section up above and download the latest build artifact._
 
-## Link to Multi-Layer-Write
-
-![BF_LinkToMultiLayerWrite]("./icons/BF_LinkToMultiLayerWrite.png")
+## ![BF_LinkToMultiLayerWrite](./icons/BF_LinkToMultiLayerWrite.png) Link to Multi-Layer-Write
 
 Connects the selected nodes in the node graph to a root-level MLW node. If no MLW node exists, it will be created. Nodes within groups can be selected, and their output will be wired all the way down to the root level automatically. MLW layers will be named according to the name of the node.
 
-## Stack Nodes
-
-![BF_StackNodes]("./icons/BF_StackNodes.png")
+## ![BF_StackNodes](./icons/BF_StackNodes.png) Stack Nodes
 
 Just clean up the selected nodes by putting them in a vertical stack.
 
-## Align Horizontal
-
-![BF_AlignHorizontal]("./icons/BF_AlignHorizontal.png")
+## ![BF_AlignHorizontal](./icons/BF_AlignHorizontal.png) Align Horizontal
 
 Aligns the selected nodes on the X-axis in the node graph.
 
