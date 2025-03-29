@@ -12,6 +12,14 @@ Or if you want a nightly build, go to the 'Actions' section in here and download
 ## Windows Powershell
 
 ```powershell
+# Install deps
 npm install
-npx tsc --outDir "$env:APPDATA\Toon Boom Animation\Toon Boom Harmony Premium\2400-scripts"
+# Set target dir
+$SCRIPTS_DIR="$env:APPDATA\Toon Boom Animation\Toon Boom Harmony Premium\2400-scripts"
+$ICONS_DIR="$($SCRIPTS_DIR)\script-icons"
+# Copy the script icons into the expected directory
+New-Item -ItemType Directory -Force -Path $ICONS_DIR
+cp ".\dist\script-icons\*" $ICONS_DIR
+# Build Typescript into Javascript, directly into the expected directory
+npx tsc --outDir $SCRIPTS_DIR
 ```

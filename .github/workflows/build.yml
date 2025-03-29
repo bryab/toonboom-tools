@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: npx tsc --noCheck
+      - run: npx tsc
       - uses: actions/upload-artifact@v4
         with:
           name: toonboom-tools
