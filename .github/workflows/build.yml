@@ -11,8 +11,8 @@ jobs:
           node-version: 18
       - run: npm ci
       - run: npx tsc
-      - run: mkdir ./dist/script-icons && cp ./icons/*.png ./dist/scripts-icons
-      - run: cp ./docs/README.txt ./dist/
+      - run: mkdir ${{ github.workspace }}/dist/script-icons && cp ${{ github.workspace }}/icons/*.png ${{ github.workspace }}/dist/scripts-icons
+      - run: cp ${{ github.workspace }}/docs/README.txt ${{ github.workspace }}/dist/
       - uses: actions/upload-artifact@v4
         with:
           name: toonboom-tools
