@@ -15,5 +15,5 @@ jobs:
       - run: cp ./docs/README.txt ./dist/
       - uses: actions/upload-artifact@v4
         with:
-          name: toonboom-tools
+          name: toonboom-tools-${{ github.head_ref }}.${{ github.sha }}
           path: ${{ github.workspace }}/dist

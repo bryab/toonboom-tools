@@ -1,4 +1,8 @@
 {
+  "version": "0.1.1",
+  "name": "toonboom-tools",
+  "author": "Bryan Fordney",
+  "homepage": "https://github.com/bryab/toonboom-tools",
   "dependencies": {
     "tba-types": "github:bryab/tba-types",
     "typescript": "^5.8.2"
