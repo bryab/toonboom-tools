@@ -1,6 +1,6 @@
 /// <reference types="tba-types/Harmony/24"/>
 
-function StackNodes() {
+function BF_StackNodes() {
   scene.beginUndoRedoAccum("Arrange selected nodes in a stack.");
   var nodes = selection.selectedNodes();
   NodeUtils.sortNodesByY(nodes);
@@ -8,7 +8,7 @@ function StackNodes() {
   scene.endUndoRedoAccum();
 }
 
-function AlignHorizontal() {
+function BF_AlignHorizontal() {
   scene.beginUndoRedoAccum("Align selected nodes horizontally");
   var modules = selection.selectedNodes();
   if (modules.length < 2) {
@@ -33,7 +33,7 @@ function AlignHorizontal() {
   scene.endUndoRedoAccum();
 }
 
-function LinkToMultiLayerWrite() {
+function BF_LinkToMultiLayerWrite() {
   const nodes = selection.selectedNodes();
 
   if (!nodes.length) {
